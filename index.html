@@ -7,28 +7,43 @@
       Engenharia Civil para Construções, Reformas e Gerenciamento de Obras
     </title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
-    <header class="menu">
+    <header class="menu" id="header">
       <img
         src="./assets/icons/logo.png"
-        alt="Logomarca de Wedson Enegenharia, construção e reformas em geral"
+        alt="Logomarca de Wedson Engenharia"
         loading="lazy"
         class="logo"
       />
+
       <nav class="navigation">
         <a href="#">Home</a>
         <a href="#servicos">Serviços</a>
-
         <a href="#sobre">Sobre Nós</a>
         <a href="#galeria">Galeria de Obras</a>
         <a href="#contato">Contato</a>
       </nav>
+
+      <button class="menu-toggle">☰</button>
     </header>
+
+    <div class="overlay"></div>
     <section class="hero" id="hero">
       <div class="container">
         <h1>
-          Engenharia Civil para Construções, Reformas e Gerenciamento de Obras
+          Engenharia civil para construções, reformas e gerenciamento de obras
         </h1>
         <p>
           Projetos, acompanhamento técnico, execução de obras, reformas
@@ -272,7 +287,46 @@
         >
       </div>
     </section>
+    <section class="gallery">
+      <div class="container">
+        <div class="sectionHeader">
+          <span>Portfólio</span>
 
+          <h2>Obras e Projetos Realizados</h2>
+
+          <p>
+            Confira alguns dos projetos, construções e reformas acompanhados
+            pela Wedson Engenharia.
+          </p>
+        </div>
+
+        <div class="swiper gallerySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/galeria/obra-01.webp" alt="" />
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./assets/galeria/obra-02.webp" alt="" />
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./assets/galeria/obra-03.webp" alt="" />
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./assets/galeria/obra-04.webp" alt="" />
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./assets/galeria/obra-05.webp" alt="" />
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
     <section class="localSeo">
       <div class="container">
         <div class="sectionHeader">
@@ -284,7 +338,13 @@
             A Wedson Engenharia atende clientes residenciais, comerciais e
             corporativos com serviços de engenharia civil, gerenciamento de
             obras, construções e reformas em diversas cidades da Região
-            Metropolitana de Belo Horizonte.
+            Metropolitana de Belo Horizonte como Belo Horizonte, Contagem,
+            Betim, Nova Lima, Lagoa Santa e Ribeirão das Neves.
+          </p>
+
+          <p>
+            Nossa equipe atua desde o planejamento até a entrega da obra,
+            garantindo qualidade, segurança e cumprimento dos prazos.
           </p>
         </div>
 
@@ -318,6 +378,14 @@
             <i class="fa-solid fa-location-dot"></i>
             <h3>Lagoa Santa</h3>
           </div>
+          <div class="cityCard">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Santa Luzia</h3>
+          </div>
+          <div class="cityCard">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Pedro Leopoldo</h3>
+          </div>
         </div>
 
         <div class="localCta">
@@ -332,23 +400,6 @@
             Solicitar Orçamento
           </a>
         </div>
-      </div>
-    </section>
-    <section class="seoContent">
-      <div class="container">
-        <h2>Engenharia Civil em Belo Horizonte e Região Metropolitana</h2>
-
-        <p>
-          A Wedson Engenharia oferece serviços de engenharia civil,
-          gerenciamento de obras, construção residencial, construção comercial,
-          reformas e acompanhamento técnico em Belo Horizonte, Contagem, Betim,
-          Nova Lima, Lagoa Santa e Ribeirão das Neves.
-        </p>
-
-        <p>
-          Nossa equipe atua desde o planejamento até a entrega da obra,
-          garantindo qualidade, segurança e cumprimento dos prazos.
-        </p>
       </div>
     </section>
 
@@ -465,7 +516,7 @@
       <div class="container">
         <div class="footerGrid">
           <div class="footerBrand">
-            <img src="./assets/logo.webp" alt="Wedson Engenharia" />
+            <img src="./assets/icons/logo.png" alt="Wedson Engenharia" />
 
             <p>
               Soluções completas em engenharia civil, construção, reformas e
@@ -551,5 +602,78 @@
         </div>
       </div>
     </footer>
+    <a
+      href="https://wa.me/5531988828183?text=Olá%20Wedson%20Engenharia,%20gostaria%20de%20solicitar%20um%20orçamento."
+      class="whatsappFloat"
+      target="_blank"
+      aria-label="Falar no WhatsApp"
+    >
+      <img src="/assets/icons/whatssapp.svg" alt="botão do whatsapp" />
+    </a>
+    <script>
+      new Swiper(".gallerySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+
+        autoplay: {
+          delay: 3500,
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+
+          1200: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+
+      const navigation = document.querySelector(".navigation");
+
+      const overlay = document.querySelector(".overlay");
+
+      menuToggle.addEventListener("click", () => {
+        navigation.classList.toggle("active");
+        overlay.classList.toggle("active");
+      });
+
+      overlay.addEventListener("click", () => {
+        navigation.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+    </script>
+    <script>
+      let lastScroll = 0;
+
+      const header = document.getElementById("header");
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll && currentScroll > 150) {
+          header.classList.add("hide");
+        } else {
+          header.classList.remove("hide");
+        }
+
+        if (currentScroll > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+
+        lastScroll = currentScroll;
+      });
+    </script>
   </body>
 </html>

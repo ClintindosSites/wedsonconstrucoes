@@ -1223,7 +1223,7 @@ html {
 
   transform: scale(1.25);
 
-  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 25px 50px rgba(226, 213, 26, 0.25));
 }
 .engineerImage {
   display: flex;
@@ -1236,19 +1236,12 @@ html {
   position: relative;
 }
 
-.engineerImage img {
-  max-width: 650px;
-  max-height: 650px;
-
-  transform: translateY(50px);
-
-  filter: drop-shadow(0 30px 60px rgba(255, 202, 29, 0.25));
-}
 .engineerInfo {
-  display: flex;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 4rem;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 .engineerText {
   display: flex;
@@ -1260,15 +1253,53 @@ html {
 }
 @media screen and (max-width: 768px) {
   .engineerInfo {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    align-items: baseline;
-    flex-direction: column-reverse;
+    gap: 2rem;
   }
+
   .engineerText {
+    width: 100%;
     align-items: center;
   }
+
+  .engineerText h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
   .engineerImage {
-    margin-bottom: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  .creaBox {
+    margin: 0 auto;
+    position: absolute;
+    margin-bottom: 70px;
+  }
+  .engineerInfo {
+    grid-template-columns: 1fr;
+  }
+  .sobre .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .engineerImage img {
+    width: 100%;
+    max-width: 350px;
+    min-width: unset;
+    max-height: 500px;
+    min-height: 300px;
+
+    transform: none;
   }
 }

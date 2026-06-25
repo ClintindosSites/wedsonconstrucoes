@@ -19,6 +19,38 @@
     #8f6900 100%
   );
 
+  --metallic-gold-black: linear-gradient(
+    180deg,
+    #fff4c2 0%,
+    #e8b52a 8%,
+    #3a3a3a 18%,
+    #1a1a1a 35%,
+    #0d0d0d 50%,
+    #1a1a1a 65%,
+    #c99700 82%,
+    #fff4c2 100%
+  );
+
+  --metallic-black: linear-gradient(
+    180deg,
+    #3a3a3a 0%,
+    #1f1f1f 15%,
+    #0d0d0d 35%,
+    #2c2c2c 55%,
+    #0d0d0d 75%,
+    #3a3a3a 100%
+  );
+
+  --gold-brushed: linear-gradient(
+    180deg,
+    #fff4c2 0%,
+    #f8dc7d 15%,
+    #e8b52a 35%,
+    #c99700 55%,
+    #f8dc7d 75%,
+    #fff4c2 100%
+  );
+
   --secondary: #1f2937;
   --secondary-light: #374151;
 
@@ -248,7 +280,7 @@ html {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
     url("assets/images/wedson-hero.webp");
-
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -353,6 +385,19 @@ html {
   flex-direction: column;
   gap: 1rem;
 }
+.services .sectionHeader h2,
+.services .sectionHeader span,
+.gallery .sectionHeader h2,
+.gallery .sectionHeader span,
+.faq h2,
+.faq span {
+  background: var(--metallic-black);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
 .sectionHeader {
   text-align: center;
   max-width: 800px;
@@ -415,11 +460,28 @@ html {
   inset: 0;
 
   background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.15) 0%,
-    rgba(0, 0, 0, 0.45) 35%,
-    rgba(0, 0, 0, 0.85) 100%
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.45) 30%,
+    rgba(0, 0, 0, 0.75) 60%,
+    rgba(0, 0, 0, 0.95) 100%
   );
+
+  z-index: 1;
+}
+.serviceCard::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at center,
+    transparent 5%,
+    rgba(0, 0, 0, 1.5) 100%
+  );
+
+  z-index: 1;
 }
 .serviceCard .content {
   position: relative;
@@ -517,6 +579,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
 }
 .authorityCard {
   background: #0d0d0d;
@@ -582,6 +645,9 @@ html {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
     url("assets/images/regional-bg.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
 }
 .citiesGrid {
@@ -882,8 +948,11 @@ html {
 
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
-    url("assets/images/banner-hero.webp");
-
+    url("assets/images/parede.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70%;
+  background-attachment: fixed;
   text-align: center;
 
   overflow: hidden;
@@ -892,6 +961,9 @@ html {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.footerCTA p {
+  color: #fff;
 }
 .gallery {
   padding: 6rem 0;

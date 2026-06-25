@@ -892,6 +892,7 @@ html {
   color: white;
 
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .socialLinks a:hover {

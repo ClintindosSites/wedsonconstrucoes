@@ -224,7 +224,7 @@ html {
     width: 320px;
     height: 100vh;
 
-    background: linear-gradient(135deg, #0f172a, #111827);
+    background: #0d0d0d;
 
     flex-direction: column;
 
@@ -247,7 +247,7 @@ html {
 
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
-    url("assets/images/wedson-hero.png");
+    url("assets/images/wedson-hero.webp");
 
   background-size: cover;
   background-position: center;
@@ -332,7 +332,8 @@ html {
 .boxItem {
   padding: 20px;
   border: 1px solid var(--primary);
-  max-width: 250px;
+  max-width: 350px;
+  width: 100%;
   max-height: 400px;
   height: 200px;
   border-radius: 12px;
@@ -378,8 +379,8 @@ html {
 }
 
 .servicesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   max-width: 1000px;
   width: 100%;
@@ -391,7 +392,8 @@ html {
   overflow: hidden;
 
   min-height: 400px;
-  max-width: 400px;
+  max-width: 350px;
+  width: 100%;
   border-radius: 24px;
 
   background-size: cover;
@@ -467,19 +469,19 @@ html {
   border-bottom: none;
 }
 .engenharia {
-  background-image: url("assets/images/wedson-engenharia-card.png");
+  background-image: url("assets/images/wedson-engenharia-card.webp");
 }
 
 .construcao {
-  background-image: url("assets/images/wedson-construcoes-card.png");
+  background-image: url("assets/images/wedson-construcoes-card.webp");
 }
 
 .reformas {
-  background-image: url("/assets/images/wedson-reformas-card.png");
+  background-image: url("/assets/images/wedson-reformas-card.webp");
 }
 
 .gerenciamento {
-  background-image: url("/assets/images/wedson-gerenciamento-card.png");
+  background-image: url("/assets/images/wedson-gerenciamento-card.webp");
 }
 
 /*AUTORIDADE*/
@@ -512,8 +514,8 @@ html {
 }
 
 .authorityGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .authorityCard {
@@ -528,6 +530,8 @@ html {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 
   transition: 0.3s ease;
+  max-width: 350px;
+  width: 100%;
 }
 
 .authorityCard:hover {
@@ -577,7 +581,7 @@ html {
 
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
-    url("assets/images/regional-bg.png");
+    url("assets/images/regional-bg.webp");
   color: white;
 }
 .citiesGrid {
@@ -878,7 +882,7 @@ html {
 
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
-    url("assets/images/banner-hero.png");
+    url("assets/images/banner-hero.webp");
 
   text-align: center;
 
@@ -998,5 +1002,12 @@ html {
 
   .whatsappFloat i {
     font-size: 2rem;
+  }
+  .footer .container {
+    flex-direction: column;
+  }
+  .footerGrid {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

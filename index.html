@@ -124,39 +124,22 @@
 
       gtag("config", "AW-18266169416");
     </script>
-    <!-- Google tag (gtag.js) event - delayed navigation helper -->
-    <script>
-      // Helper function to delay opening a URL until a gtag event is sent.
-      // Call it in response to an action that should navigate to a URL.
-      function gtagSendEvent(url) {
-        var callback = function () {
-          if (typeof url === "string") {
-            window.location = url;
-          }
-        };
-        gtag("event", "ads_conversion_Contato_1", {
-          event_callback: callback,
-          event_timeout: 2000,
-          // <event_parameters>
-        });
-        return false;
-      }
-    </script>
+
     <!-- Event snippet for Chamou no WhatsApp conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
       function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof url != "undefined") {
-            window.location = url;
-          }
-        };
         gtag("event", "conversion", {
           send_to: "AW-18266169416/3BbDCK2ovMYcEMjA_oVE",
           value: 1.0,
           currency: "BRL",
-          event_callback: callback,
         });
+        // Redireciona imediatamente, independente do callback
+        if (typeof url === "string") {
+          setTimeout(function () {
+            window.location = url;
+          }, 500); // pequeno delay para o gtag enviar o evento
+        }
         return false;
       }
     </script>
@@ -213,7 +196,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         <a href="#servicos">Serviços</a>
         <a href="#sobre">Sobre Nós</a>
         <a href="#portfolio">Galeria de Obras</a>
-        <ahref="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?" onclick="gtag_report_conversion"
+        <a
+          href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          onclick="return gtag_report_conversion(this.href);"
           >Contato</a
         >
       </nav>
@@ -233,10 +218,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           prazos.
         </p>
         <a
-         href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
           target="_blank"
           class="ctaButton"
-          onclick="gtag_report_conversion"
+          onclick="return gtag_report_conversion(this.href);"
           >Solicite um Orçamento</a
         >
       </div>
@@ -297,8 +282,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           </div>
         </div>
         <a
-         href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
-          onclick="gtag_report_conversion"
+          href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          onclick="return gtag_report_conversion(this.href);"
+          target="_blank"
           class="ctaButton"
         >
           Falar com o Engenheiro
@@ -461,8 +447,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           </div>
         </div>
         <a
-         href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
-          onclick="gtag_report_conversion"
+          href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          onclick="return gtag_report_conversion(this.href);"
           target="_blank"
           class="ctaButton"
           >Solicite um Orçamento</a
@@ -538,8 +524,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           </div>
         </div>
         <a
-         href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
-          onclick="gtag_report_conversion"
+          href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          onclick="return gtag_report_conversion(this.href);"
           target="_blank"
           class="ctaButton"
           >Solicite um Orçamento</a
@@ -1090,8 +1076,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         </div>
 
         <a
-         href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
-          onclick="gtag_report_conversion"
+          href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          onclick="return gtag_report_conversion(this.href);"
           target="_blank"
           class="ctaButton"
           >Solicite um Orçamento</a
@@ -1169,8 +1155,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           </p>
 
           <a
-           href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
-            onclick="gtag_report_conversion"
+            href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+            onclick="return gtag_report_conversion(this.href);"
+            target="_blank"
             class="ctaButton"
           >
             Solicitar Orçamento
@@ -1284,8 +1271,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         </p>
 
         <a
-         href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
-          onclick="gtag_report_conversion"
+          href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          onclick="return gtag_report_conversion(this.href);"
+          target="_blank"
           class="ctaButton"
         >
           Solicitar Orçamento
@@ -1403,8 +1391,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </ul>
 
             <a
-             href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
-                onclick="return gtag_report_conversion(this.href);"
+              href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+              onclick="return gtag_report_conversion(this.href);"
+              target="_blank"
               class="footerWhatsapp"
             >
               Solicitar Orçamento
@@ -1429,7 +1418,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       class="whatsappFloat"
       target="_blank"
       aria-label="Falar no WhatsApp"
-      onclick="gtag_report_conversion"
+      onclick="return gtag_report_conversion(this.href);"
     >
       <img src="/assets/icons/whatssapp.svg" alt="botão do whatsapp" />
     </a>

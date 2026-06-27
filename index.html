@@ -142,6 +142,24 @@
         return false;
       }
     </script>
+    <!-- Event snippet for Chamou no WhatsApp conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-18266169416/3BbDCK2ovMYcEMjA_oVE",
+          value: 1.0,
+          currency: "BRL",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -195,7 +213,9 @@
         <a href="#servicos">Serviços</a>
         <a href="#sobre">Sobre Nós</a>
         <a href="#portfolio">Galeria de Obras</a>
-        <a href="https://wa.me/5531988828183">Contato</a>
+        <ahref="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?" onclick="gtag_report_conversion"
+          >Contato</a
+        >
       </nav>
 
       <button class="menu-toggle">☰</button>
@@ -212,7 +232,11 @@
           residenciais e comerciais com qualidade, segurança e cumprimento de
           prazos.
         </p>
-        <a href="https://wa.me/5531988828183" target="_blank" class="ctaButton"
+        <a
+         href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          target="_blank"
+          class="ctaButton"
+          onclick="gtag_report_conversion"
           >Solicite um Orçamento</a
         >
       </div>
@@ -272,7 +296,11 @@
             </div>
           </div>
         </div>
-        <a href="https://wa.me/5531988828183" class="ctaButton">
+        <a
+         href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          onclick="gtag_report_conversion"
+          class="ctaButton"
+        >
           Falar com o Engenheiro
         </a>
       </div>
@@ -335,7 +363,7 @@
             </p>
           </div>
         </div>
-        <a href="https://wa.me/5531988828183" target="_blank" class="ctaButton"
+        <ahref="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?" target="_blank" class="ctaButton"
           >Solicite um Orçamento</a
         >
       </div>
@@ -432,7 +460,11 @@
             </div>
           </div>
         </div>
-        <a href="https://wa.me/5531988828183" target="_blank" class="ctaButton"
+        <a
+         href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          onclick="gtag_report_conversion"
+          target="_blank"
+          class="ctaButton"
           >Solicite um Orçamento</a
         >
       </div>
@@ -505,7 +537,11 @@
             </p>
           </div>
         </div>
-        <a href="https://wa.me/5531988828183" target="_blank" class="ctaButton"
+        <a
+         href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          onclick="gtag_report_conversion"
+          target="_blank"
+          class="ctaButton"
           >Solicite um Orçamento</a
         >
       </div>
@@ -1053,7 +1089,11 @@
           <div class="swiper-pagination"></div>
         </div>
 
-        <a href="https://wa.me/5531988828183" target="_blank" class="ctaButton"
+        <a
+         href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          onclick="gtag_report_conversion"
+          target="_blank"
+          class="ctaButton"
           >Solicite um Orçamento</a
         >
       </div>
@@ -1128,7 +1168,11 @@
             compromisso.
           </p>
 
-          <a href="https://wa.me/5531988828183" class="ctaButton">
+          <a
+           href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+            onclick="gtag_report_conversion"
+            class="ctaButton"
+          >
             Solicitar Orçamento
           </a>
         </div>
@@ -1239,7 +1283,11 @@
           segurança e cumprimento de prazos.
         </p>
 
-        <a href="https://wa.me/5531988828183" class="ctaButton">
+        <a
+         href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+          onclick="gtag_report_conversion"
+          class="ctaButton"
+        >
           Solicitar Orçamento
         </a>
       </div>
@@ -1354,7 +1402,11 @@
               <li>Minas Gerais - Brasil</li>
             </ul>
 
-            <a href="https://wa.me/5531988828183" class="footerWhatsapp">
+            <a
+             href="https://wa.me/5531988828183?text=Olá!%20Encontrei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra.%20Poderia%20me%20passar%20mais%20informações?"
+                onclick="return gtag_report_conversion(this.href);"
+              class="footerWhatsapp"
+            >
               Solicitar Orçamento
             </a>
           </div>
@@ -1377,6 +1429,7 @@
       class="whatsappFloat"
       target="_blank"
       aria-label="Falar no WhatsApp"
+      onclick="gtag_report_conversion"
     >
       <img src="/assets/icons/whatssapp.svg" alt="botão do whatsapp" />
     </a>

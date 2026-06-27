@@ -107,24 +107,9 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-BG6WTPKDYF");
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-18266169416"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
       gtag("config", "AW-18266169416");
     </script>
-
     <!-- Event snippet for Chamou no WhatsApp conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
@@ -368,7 +353,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         </div>
 
         <div class="servicesGrid">
-          <div class="serviceCard engenharia">
+          <div class="serviceCard engenharia" id="engenharia-civil">
             <div class="overlay"></div>
 
             <div class="content">
@@ -389,7 +374,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </div>
           </div>
 
-          <div class="serviceCard construcao">
+          <div class="serviceCard construcao" id="construcao-de-casas">
             <div class="overlay"></div>
 
             <div class="content">
@@ -409,7 +394,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </div>
           </div>
 
-          <div class="serviceCard reformas">
+          <div class="serviceCard reformas" id="reformas-em-geral">
             <div class="overlay"></div>
 
             <div class="content">
@@ -429,7 +414,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </div>
           </div>
 
-          <div class="serviceCard gerenciamento">
+          <div class="serviceCard gerenciamento" id="gerenciamento-de-obras">
             <div class="overlay"></div>
 
             <div class="content">
@@ -818,13 +803,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 loading="lazy"
               />
             </div>
-            <div class="swiper-slide">
-              <img
-                src="./assets/galeria/cozinha-12.webp"
-                alt="Projeto de cozinha residencial personalizada"
-                loading="lazy"
-              />
-            </div>
+
             <div class="swiper-slide">
               <img
                 src="./assets/galeria/cozinha-13.webp"
@@ -1302,7 +1281,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
 
-              <a href="https://wa.me/5531088828183">
+              <a href="https://wa.me/5531988828183">
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
             </div>
@@ -1316,6 +1295,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <a
                   href="https://wa.me/5531988828183?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20serviços%20de%20Engenharia%20Civil."
                   target="_blank"
+                  onclick="return gtag_report_conversion(this.href);"
                   rel="noopener noreferrer"
                 >
                   Engenharia Civil
@@ -1326,6 +1306,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <a
                   href="https://wa.me/5531988828183?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20Construção."
                   target="_blank"
+                  onclick="return gtag_report_conversion(this.href);"
                   rel="noopener noreferrer"
                 >
                   Construção
@@ -1336,6 +1317,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <a
                   href="https://wa.me/5531988828183?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20Reforma."
                   target="_blank"
+                  onclick="return gtag_report_conversion(this.href);"
                   rel="noopener noreferrer"
                 >
                   Reformas
@@ -1346,6 +1328,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <a
                   href="https://wa.me/5531988828183?text=Olá,%20gostaria%20de%20informações%20sobre%20Gerenciamento%20de%20Obras."
                   target="_blank"
+                  onclick="return gtag_report_conversion(this.href);"
                   rel="noopener noreferrer"
                 >
                   Gerenciamento de Obras
@@ -1356,6 +1339,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <a
                   href="https://wa.me/5531988828183?text=Olá,%20preciso%20de%20ajuda%20com%20Regularização%20de%20Imóvel."
                   target="_blank"
+                  onclick="return gtag_report_conversion(this.href);"
                   rel="noopener noreferrer"
                 >
                   Regularização de Imóveis
@@ -1374,6 +1358,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               <li>Nova Lima</li>
               <li>Lagoa Santa</li>
               <li>Ribeirão das Neves</li>
+              <li>Santa Luzia</li>
+              <li>Sabará</li>
+              <li>Sete Lagoas</li>
+              <li>Matozinhos</li>
+              <li>Pedro Leopoldo</li>
+              <li>Vespasiano</li>
             </ul>
           </div>
 
@@ -1507,7 +1497,17 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           "Betim",
           "Nova Lima",
           "Lagoa Santa",
-          "Ribeirão das Neves"
+          "Ribeirão das Neves",
+          "Sabará",
+          "Santa Luzia",
+          "Sete Lagoas",
+          "Vespasiano",
+          "Matozinhos",
+          "Pedro Leopoldo",
+          "Caeté",
+          "Congonhas",
+          "Brumadinho",
+          "Sarzedo"
         ],
         "serviceType": [
           "Engenharia Civil",
@@ -1515,7 +1515,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           "Reformas",
           "Gerenciamento de Obras",
           "Consultoria Técnica",
-          "ART"
+          "ART",
+          "Alvenaria",
+          "Pedreiro",
+          "Pedreiro de Acabamentos"
         ]
       }
     </script>
